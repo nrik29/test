@@ -4,16 +4,18 @@ window.onload = function (e) {
     });
 };
 
-function getUrlParam(parameter, defaultvalue){
-    var urlparameter = defaultvalue;
-    if(window.location.href.indexOf(parameter) > -1){
-        urlparameter = getUrlVars()[parameter];
-        }
-    return urlparameter;
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
 function initializeApp(data) {
-    var mytext = getUrlParam('id','Empty');
+    var mytext = getParameterByName('foo');
     document.getElementById('param').value = mytext;
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
