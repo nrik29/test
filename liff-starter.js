@@ -39,14 +39,14 @@ function initializeApp(data) {
                 text: "Please select",
                 defaultAction: {
                     type: "uri",
-                    label: "View detail",
-                    uri: "http://example.com/page/123"
+                    label: "Button",
+                    uri: "line://apps/1601769611-NVKq2lMZ"
                     },
                 actions: [
                     {
                     type: "uri",
                     label: "View detail",
-                    uri: "http://example.com/page/123"
+                    uri: "line://apps/1601769611-NVKq2lMZ"
                     }
                 ]
             }
