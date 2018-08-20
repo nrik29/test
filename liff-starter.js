@@ -24,7 +24,7 @@ function initializeApp(data) {
         liff.closeWindow();
     });
 
-    // sendMessages call
+    // sendMessagesButton call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
               type: "template",
@@ -51,12 +51,38 @@ function initializeApp(data) {
                 ]
             }
         }]).then(function () {
-            window.alert("Message sent");
+            liff.closeWindow();
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
     });
 
+    // sendMessagesCarousel call
+    document.getElementById('sendmessagecarousel').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
+                         action: {
+                             type: "uri",
+                             label: "ini 1",
+                             uri: "line://apps/1601769611-NVKq2lMZ"}},
+                                 {
+                         imageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
+                         action: {
+                             type: "uri",
+                             label: "ini 2",
+                             uri: "line://apps/1601769611-NVKq2lMZ"}}
+                                  ]
+                                }
+        }]).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+    
     //get profile call https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
     document.getElementById('getprofilebutton').addEventListener('click', function () {
         liff.getProfile().then(function (profile) {
