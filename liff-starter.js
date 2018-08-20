@@ -85,6 +85,26 @@ function initializeApp(data) {
         });
     });
     
+    // sendMessagesSticker call
+    document.getElementById('sendsticker').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ document.getElementById('stkid').value + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
     //get profile call https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
     //document.getElementById('getprofilebutton').addEventListener('click', function () {
     //    liff.getProfile().then(function (profile) {
