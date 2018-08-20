@@ -17,6 +17,7 @@ function getParameterByName(name, url) {
 function initializeApp(data) {
     //var mytext = getParameterByName('stkid');
     document.getElementById('imgstk').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('stkid') + '/ANDROID/sticker_animation@2x.png';
+    document.getElementById('inputsrc').value = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('stkid') + '/ANDROID/sticker_animation@2x.png';
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
     //document.getElementById('useridfield').textContent = data.context.userId;
