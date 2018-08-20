@@ -4,7 +4,17 @@ window.onload = function (e) {
     });
 };
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
 function initializeApp(data) {
+    var mytext = getUrlVars()["id"];
+    document.getElementById('param').value = mytext;
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
     //document.getElementById('useridfield').textContent = data.context.userId;
@@ -105,6 +115,9 @@ function initializeApp(data) {
             window.alert("Error sending message: " + error);
         });
     });
+    
+    // getValueParam
+    
     //get profile call https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
     //document.getElementById('getprofilebutton').addEventListener('click', function () {
     //    liff.getProfile().then(function (profile) {
