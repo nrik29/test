@@ -27,8 +27,29 @@ function initializeApp(data) {
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
-            type: 'text',
-            text: "OK Sukses Kirim Pesan"
+              type: "template",
+              altText: "This is a buttons template",
+              template: {
+                type: "buttons",
+                thumbnailImageUrl: "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
+                imageAspectRatio: "rectangle",
+                imageSize: "cover",
+                imageBackgroundColor: "#FFFFFF",
+                title: "Menu",
+                text: "Please select",
+                defaultAction: {
+                    type: "uri",
+                    label: "View detail",
+                    uri: "http://example.com/page/123"
+                    },
+                actions: [
+                    {
+                    type: "uri",
+                    label: "View detail",
+                    uri: "http://example.com/page/123"
+                    }
+                ]
+            }
         }]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
