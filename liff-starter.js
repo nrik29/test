@@ -27,9 +27,11 @@ function initializeApp(data) {
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
-            "type": "text",
-            "text": "Me"
-        }]).catch(function (error) {
+            type: 'text',
+            text: "OK Sukses Kirim Pesan"
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
     });
