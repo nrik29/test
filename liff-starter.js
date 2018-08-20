@@ -51,7 +51,7 @@ function initializeApp(data) {
                 ]
             }
         }]).then(function () {
-            liff.closeWindow();
+            window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
@@ -78,7 +78,9 @@ function initializeApp(data) {
                              uri: "line://apps/1601769611-NVKq2lMZ"}}
                                   ]
                                 }
-        }]).catch(function (error) {
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
     });
