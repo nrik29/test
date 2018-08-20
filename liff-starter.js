@@ -27,9 +27,8 @@ function initializeApp(data) {
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
-            "type": "image",
-            "originalContentUrl": "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
-            "previewImageUrl": "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+            "type": "text",
+            "text": "Me"
         }]).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
