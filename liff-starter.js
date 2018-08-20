@@ -4,17 +4,17 @@ window.onload = function (e) {
     });
 };
 
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
+function getUrlParam(parameter, defaultvalue){
+    var urlparameter = defaultvalue;
+    if(window.location.href.indexOf(parameter) > -1){
+        urlparameter = getUrlVars()[parameter];
+        }
+    return urlparameter;
 }
 
 function initializeApp(data) {
-    var mytext = getUrlVars()["id"];
-    document.getElementById('param').textContent = mytext;
+    var mytext = getUrlParam('id','Empty');
+    document.getElementById('param').value = mytext;
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
     //document.getElementById('useridfield').textContent = data.context.userId;
