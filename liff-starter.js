@@ -40,13 +40,13 @@ function initializeApp(data) {
                 defaultAction: {
                     type: "uri",
                     label: "Button",
-                    uri: "line://apps/1601769611-NVKq2lMZ"
+                    uri: "line://app/1601769611-9WQRv8EL"
                     },
                 actions: [
                     {
                     type: "uri",
                     label: "View detail",
-                    uri: "line://apps/1601769611-NVKq2lMZ"
+                    uri: "line://app/1601769611-9WQRv8EL"
                     }
                 ]
             }
@@ -69,7 +69,7 @@ function initializeApp(data) {
                          action: {
                              type: "uri",
                              label: "ini 1",
-                             uri: "line://apps/1601769611-NVKq2lMZ"}},
+                             uri: "line://app/1601769611-9WQRv8EL"}},
                                  {
                          imageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
                          action: {
