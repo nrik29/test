@@ -28,12 +28,32 @@ function initializeApp(data) {
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
             type: 'text',
-            text: "You've successfully sent a message! Hooray!"
+            text: "OK Sukses Kirim Pesan"
         }, {
-            type: 'sticker',
-            packageId: '2',
-            stickerId: '144'
-        }]).then(function () {
+  "type": "template",
+  "altText": "This is a buttons template",
+  "template": {
+      "type": "buttons",
+      "thumbnailImageUrl": "http://icons.iconarchive.com/icons/martin-berube/animal/256/bat-icon.png",
+      "imageAspectRatio": "rectangle",
+      "imageSize": "cover",
+      "imageBackgroundColor": "#FFFFFF",
+      "title": "Menu",
+      "text": "Please select",
+      "defaultAction": {
+          "type": "uri",
+          "label": "View detail",
+          "uri": "https://line.me"
+      },
+      "actions": [
+          {
+            "type": "uri",
+            "label": "View detail",
+            "uri": "https://line.me"
+          }
+      ]
+  }
+}]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
             window.alert("Error sending message: " + error);
