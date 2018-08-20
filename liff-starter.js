@@ -40,13 +40,13 @@ function initializeApp(data) {
                 defaultAction: {
                     type: "uri",
                     label: "Button",
-                    uri: "http://www.google.com"
+                    uri: "line://apps/1601769611-NVKq2lMZ"
                     },
                 actions: [
                     {
                     type: "uri",
                     label: "View detail",
-                    uri: "line://nv/connectedDevices"
+                    uri: "line://apps/1601769611-NVKq2lMZ"
                     }
                 ]
             }
@@ -75,7 +75,7 @@ function initializeApp(data) {
                          action: {
                              type: "uri",
                              label: "ini 2",
-                             uri: "line://apps/1601769611-NVKq2lMZ"}}
+                             uri: "line://nv/connectedDevices"}}
                                   ]
                                 }
         }]).then(function () {
