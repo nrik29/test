@@ -14,7 +14,7 @@ function getUrlVars() {
 
 function initializeApp(data) {
     var mytext = getUrlVars()["id"];
-    document.getElementById('param').value = mytext;
+    document.getElementById('param').textContent = mytext;
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
     //document.getElementById('useridfield').textContent = data.context.userId;
