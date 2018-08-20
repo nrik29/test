@@ -31,7 +31,7 @@ function initializeApp(data) {
               altText: "This is a buttons template",
               template: {
                 type: "buttons",
-                thumbnailImageUrl: "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
+                thumbnailImageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
                 imageAspectRatio: "rectangle",
                 imageSize: "cover",
                 imageBackgroundColor: "#FFFFFF",
@@ -40,13 +40,13 @@ function initializeApp(data) {
                 defaultAction: {
                     type: "uri",
                     label: "Button",
-                    uri: "line://apps/1601769611-NVKq2lMZ"
+                    uri: "http://www.google.com"
                     },
                 actions: [
                     {
                     type: "uri",
                     label: "View detail",
-                    uri: "line://apps/1601769611-NVKq2lMZ"
+                    uri: "line://nv/connectedDevices"
                     }
                 ]
             }
