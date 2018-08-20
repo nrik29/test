@@ -27,35 +27,10 @@ function initializeApp(data) {
     // sendMessages call
     document.getElementById('sendmessagebutton').addEventListener('click', function () {
         liff.sendMessages([{
-            type: 'text',
-            text: "OK Sukses Kirim Pesan"
-        }, {
-  "type": "template",
-  "altText": "This is a buttons template",
-  "template": {
-      "type": "buttons",
-      "thumbnailImageUrl": "http://icons.iconarchive.com/icons/martin-berube/animal/256/bat-icon.png",
-      "imageAspectRatio": "rectangle",
-      "imageSize": "cover",
-      "imageBackgroundColor": "#FFFFFF",
-      "title": "Menu",
-      "text": "Please select",
-      "defaultAction": {
-          "type": "uri",
-          "label": "View detail",
-          "uri": "https://line.me"
-      },
-      "actions": [
-          {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "https://line.me"
-          }
-      ]
-  }
-}]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
+            "type": "image",
+            "originalContentUrl": "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png",
+            "previewImageUrl": "https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png"
+        }]).catch(function (error) {
             window.alert("Error sending message: " + error);
         });
     });
