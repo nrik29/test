@@ -15,27 +15,19 @@ function getParameterByName(name, url) {
 }
 
 function initializeApp(data) {
-    document.getElementById('inputsrc').value = getParameterByName('pkgid');
-    document.getElementById('test').textContent = getParameterByName('stkid');
-    //Array Image
-    var stkidd = getParameterByName('stkid');
-    var res = stkidd.split(",");
-    document.getElementById('test2').textContent = res;
-    var text = [];
-    var i;
-    for (i = 0; i < res.length; i++) {
-        text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ res[i] +'/ANDROID/sticker.png'];
-        }
-    document.getElementById('test3').textContent = text;
-    //var ArrayOfImages = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg']; //your assumed array
-    text.forEach(function(image) {
-        var img = document.createElement('img');
-        img.src = image;
-        img.height = "45";
-        img.width = "50";
-        document.body.appendChild(img);
-    });
-    
+    document.getElementById('main').src = 'https://stickershop.line-scdn.net/stickershop/v1/product/'+getParameterByName('pkgid')+'/LINEStorePC/thumbnail_shop.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('1')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('2')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('3')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('4')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('5')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('6')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('7')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('8')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('9')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('10')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('11')+'/ANDROID/sticker_animation@2x.png';
+    document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('12')+'/ANDROID/sticker_animation@2x.png';
     //var mytext = getParameterByName('stkid');
     //document.getElementById('imgstk').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('pkgid') + '/ANDROID/sticker_animation@2x.png';
     //document.getElementById('languagefield').textContent = data.language;
@@ -53,80 +45,18 @@ function initializeApp(data) {
     //});
 
     // closeWindow call
-    //document.getElementById('closewindowbutton').addEventListener('click', function () {
-    //    liff.closeWindow();
-    //});
-
-    // sendMessagesButton call
-    document.getElementById('sendmessagebutton').addEventListener('click', function () {
-        liff.sendMessages([{
-              type: "template",
-              altText: "This is a buttons template",
-              template: {
-                type: "buttons",
-                thumbnailImageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
-                imageAspectRatio: "rectangle",
-                imageSize: "cover",
-                imageBackgroundColor: "#FFFFFF",
-                title: "Menu",
-                text: "Please select",
-                defaultAction: {
-                    type: "uri",
-                    label: "Button",
-                    uri: "line://app/1601769611-9WQRv8EL"
-                    },
-                actions: [
-                    {
-                    type: "uri",
-                    label: "View detail",
-                    uri: "line://app/1601769611-9WQRv8EL"
-                    }
-                ]
-            }
-        }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
-    });
-
-    // sendMessagesCarousel call
-    document.getElementById('sendmessagecarousel').addEventListener('click', function () {
-        liff.sendMessages([{
-              type: "template",
-              altText: "Menu",
-              template: {
-                     type: "image_carousel",
-                     columns: [{
-                         imageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
-                         action: {
-                             type: "uri",
-                             label: "ini 1",
-                             uri: "line://app/1601769611-9WQRv8EL"}},
-                                 {
-                         imageUrl: "https://i.ebayimg.com/images/g/5Q8AAOSwPCVX9Moo/s-l300.jpg",
-                         action: {
-                             type: "uri",
-                             label: "ini 2",
-                             uri: "line://nv/connectedDevices"}}
-                                  ]
-                                }
-        }]).then(function () {
-            window.alert("Message sent");
-        }).catch(function (error) {
-            window.alert("Error sending message: " + error);
-        });
+    document.getElementById('closewindowbutton').addEventListener('click', function () {
+        liff.closeWindow();
     });
     
-    // sendMessagesSticker call
-    document.getElementById('sendsticker').addEventListener('click', function () {
+    document.getElementById('send1').addEventListener('click', function () {
         liff.sendMessages([{
               type: "template",
               altText: "Menu",
               template: {
                      type: "image_carousel",
                      columns: [{
-                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ document.getElementById('stkid').value + '/ANDROID/sticker_animation@2x.png',
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ document.getElementById('1').value + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
                              uri: "line://nv/stickerShop"}}
@@ -138,7 +68,6 @@ function initializeApp(data) {
             window.alert("Error sending message: " + error);
         });
     });
-    
     // getValueParam
     
     //get profile call https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
