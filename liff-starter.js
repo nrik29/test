@@ -56,7 +56,7 @@ function initializeApp(data) {
               template: {
                      type: "image_carousel",
                      columns: [{
-                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ document.getElementById('1').value + '/ANDROID/sticker_animation@2x.png',
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('1') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
                              uri: "line://nv/stickerShop"}}
@@ -68,6 +68,216 @@ function initializeApp(data) {
             window.alert("Error sending message: " + error);
         });
     });
+        document.getElementById('send2').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('2') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send3').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('3') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send4').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('4') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send5').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('5') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send6').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('6') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send7').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('7') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send8').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('8') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send9').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('9') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send10').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('10') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send11').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('11') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+        document.getElementById('send12').addEventListener('click', function () {
+        liff.sendMessages([{
+              type: "template",
+              altText: "Menu",
+              template: {
+                     type: "image_carousel",
+                     columns: [{
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('12') + '/ANDROID/sticker_animation@2x.png',
+                         action: {
+                             type: "uri",
+                             uri: "line://nv/stickerShop"}}
+                                  ]
+                                }
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+    });
+
     // getValueParam
     
     //get profile call https://www.google.co.id/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png
