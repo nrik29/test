@@ -19,12 +19,14 @@ function initializeApp(data) {
     document.getElementById('test').textContent = getParameterByName('stkid');
     //Array Image
     var stkidd = getParameterByName('stkid');
+    var res = stkidd.split(",");
+    document.getElementById('test2').textContent = res;
     var text = [];
     var i;
-    for (i = 0; i < stkidd.length; i++) {
-        text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ stkidd[i] +'/ANDROID/sticker.png'];
+    for (i = 0; i < res.length; i++) {
+        text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ res[i] +'/ANDROID/sticker.png'];
         }
-    document.getElementById('test2').textContent = text;
+    document.getElementById('test3').textContent = text;
     //var ArrayOfImages = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg']; //your assumed array
     text.forEach(function(image) {
         var img = document.createElement('img');
