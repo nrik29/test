@@ -18,11 +18,11 @@ function initializeApp(data) {
     document.getElementById('inputsrc').value = getParameterByName('pkgid');
     document.getElementById('test').textContent = getParameterByName('stkid');
     //Array Image
-    var stkid = getParameterByName('stkid');
+    var stkidd = getParameterByName('stkid');
     var text = [];
     var i;
-    for (i = 0; i < cars.length; i++) {
-        text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ stkid[i] +'/ANDROID/sticker.png'];
+    for (i = 0; i < stkidd.length; i++) {
+        text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ stkidd[i] +'/ANDROID/sticker.png'];
         }
     document.getElementById('test2').textContent = text;
     //var ArrayOfImages = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg']; //your assumed array
