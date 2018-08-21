@@ -24,6 +24,7 @@ function initializeApp(data) {
     for (i = 0; i < cars.length; i++) {
         text += ['https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ stkid[i] +'/ANDROID/sticker.png'];
         }
+    document.getElementById('test2').textContent = text;
     //var ArrayOfImages = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg']; //your assumed array
     text.forEach(function(image) {
         var img = document.createElement('img');
