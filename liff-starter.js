@@ -15,9 +15,26 @@ function getParameterByName(name, url) {
 }
 
 function initializeApp(data) {
+    document.getElementById('inputsrc').value = getParameterByName('pkgid');
+    //Array Image
+    var stkid = getParameterByName('stkid');
+    var text = [];
+    var i;
+    for (i = 0; i < cars.length; i++) {
+        text += 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ stkid[i] +'/ANDROID/sticker.png';
+        }
+    //var ArrayOfImages = ['https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Wiktionary_small.svg']; //your assumed array
+    text.forEach(function(image) {
+        var img = document.createElement('img');
+        img.src = image;
+        img.height = "45";
+        img.width = "50";
+        document.body.appendChild(img);
+    });
     //var mytext = getParameterByName('stkid');
-    document.getElementById('imgstk').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('stkid') + '/ANDROID/sticker_animation@2x.png';
-    document.getElementById('inputsrc').value = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('stkid') + '/ANDROID/sticker_animation@2x.png';
+    //document.getElementById('imgstk').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('pkgid') + '/ANDROID/sticker_animation@2x.png';
+    
+    document.getElementById('test').value = text;
     //document.getElementById('languagefield').textContent = data.language;
     //document.getElementById('viewtypefield').textContent = data.context.viewType;
     //document.getElementById('useridfield').textContent = data.context.userId;
