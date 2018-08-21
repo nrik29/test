@@ -79,7 +79,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('2') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -98,7 +98,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('3') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -117,7 +117,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('4') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -136,7 +136,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('5') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -155,7 +155,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('6') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -174,7 +174,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('7') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -193,7 +193,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('8') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -212,7 +212,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('9') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -231,7 +231,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('10') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -250,7 +250,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('11') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
@@ -269,7 +269,7 @@ function initializeApp(data) {
                          imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ getParameterByName('12') + '/ANDROID/sticker_animation@2x.png',
                          action: {
                              type: "uri",
-                             uri: "line://nv/stickerShop"}}
+                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
                                   ]
                                 }
         }]).then(function () {
