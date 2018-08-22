@@ -29,7 +29,7 @@ function makeList(){
     var i;
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
-        var x = document.createElement("IMG").addEventListener('click', function () {
+        var a = document.createElement("a").addEventListener('click', function () {
             liff.sendMessages([{
               type: "template",
               altText: "Menu",
@@ -48,7 +48,9 @@ function makeList(){
                 window.alert("Error sending message: " + error);
             });
         });
+        var x = document.createElement("img");
         x.setAttribute("src", 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png');
+        document.body.appendChild(a);
         document.body.appendChild(x);
       };
 }
