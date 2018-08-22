@@ -2,6 +2,7 @@ window.onload = function (e) {
     liff.init(function (data) {
         initializeApp(data);
         getProfile();
+        makeList();
     });
 };
 
@@ -21,10 +22,14 @@ function getProfile(){
     });
 }
 
+function makeList(){
+    var stri = getParameterByName('t');
+    var isi = stri.split(',');
+    document.getElementById('loop').value = isi;
+}
     
 function initializeApp(data) {
     //document.getElementById('userid').textContent = liff.getProfile().displayName;
-    document.getElementById('loop').value = getParameterByName('t').split(',');
     document.getElementById('main').src = 'https://stickershop.line-scdn.net/stickershop/v1/product/'+getParameterByName('pkgid')+'/LINEStorePC/thumbnail_shop.png';
     document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('1')+'/ANDROID/sticker_animation@2x.png';
     document.getElementById('2').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('2')+'/ANDROID/sticker_animation@2x.png';
