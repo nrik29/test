@@ -43,3 +43,12 @@ button {
     -moz-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
     box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
 }
+#footer{ /* Keterangan footer sama dengan header */
+	width:100td_persen;
+	height:50px;
+	border-bottom:silver 1px solid;
+	position:fixed;
+	bottom:0px;
+	background-color:#cccccc;
+	z-index:2;
+}
