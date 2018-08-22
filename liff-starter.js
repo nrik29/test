@@ -1,5 +1,6 @@
 window.onload = function (e) {
     liff.init(function (data) {
+        getProfile();
         initializeApp(data);
     });
 };
@@ -13,9 +14,15 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
-            
+function getProfile(){
+    // https://developers.line.me/ja/reference/liff/#liffgetprofile()
+    liff.getProfile().then(function (profile) {
+        document.getElementById('userid').textContent = profile.displayName;
+    });
+}
+
 function initializeApp(data) {
-    document.getElementById('userid').textContent = liff.getProfile().displayName;
+    //document.getElementById('userid').textContent = liff.getProfile().displayName;
     document.getElementById('titlee').textContent = getParameterByName('t');
     document.getElementById('main').src = 'https://stickershop.line-scdn.net/stickershop/v1/product/'+getParameterByName('pkgid')+'/LINEStorePC/thumbnail_shop.png';
     document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('1')+'/ANDROID/sticker_animation@2x.png';
