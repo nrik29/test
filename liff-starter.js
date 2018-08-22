@@ -24,7 +24,7 @@ function getProfile(){
     
 function initializeApp(data) {
     //document.getElementById('userid').textContent = liff.getProfile().displayName;
-    document.getElementById('loop').value = getParameterByName('t');
+    document.getElementById('loop').value = getParameterByName('t').split(',');
     document.getElementById('main').src = 'https://stickershop.line-scdn.net/stickershop/v1/product/'+getParameterByName('pkgid')+'/LINEStorePC/thumbnail_shop.png';
     document.getElementById('1').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('1')+'/ANDROID/sticker_animation@2x.png';
     document.getElementById('2').src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+getParameterByName('2')+'/ANDROID/sticker_animation@2x.png';
