@@ -25,7 +25,7 @@ function getProfile(){
 function makeList(){
     var stri = getParameterByName('t');
     var isi = stri.split(',');
-    document.getElementById('loop').value = 'hasil3  '+isi;
+    document.getElementById('loop').value = 'hasil4  '+isi;
     var i;
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
@@ -51,6 +51,7 @@ function makeList(){
             window.alert("Error sending message: " + error);
         });
     });
+        document.body.appendChild(a)
     };
 }
     
