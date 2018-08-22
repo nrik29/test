@@ -25,12 +25,12 @@ function getProfile(){
 function makeList(){
     var stri = getParameterByName('t');
     var isi = stri.split(',');
-    document.getElementById('loop').value = 'hasil2  '+isi;
+    document.getElementById('loop').value = 'hasil3  '+isi;
     var i;
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
-        var a = document.createElement("a");
-        a.innerHTML = "<img src='https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png'>";
+        var a = document.createElement("img");
+        a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png';
         //a.id = isi[i]
         a.addEventListener('click', function () {
         liff.sendMessages([{
