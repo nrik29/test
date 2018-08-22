@@ -17,7 +17,7 @@ function getParameterByName(name, url) {
 function getProfile(){
     // https://developers.line.me/ja/reference/liff/#liffgetprofile()
     liff.getProfile().then(function (profile) {
-        document.getElementById('userid').textContent = 'Hai' + profile.displayName;
+        document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
     });
 }
 
