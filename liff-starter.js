@@ -29,26 +29,10 @@ function makeList(){
     var i;
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
-        var a = document.createElement("a").addEventListener('click', function () {
-            liff.sendMessages([{
-              type: "template",
-              altText: "Menu",
-              template: {
-                     type: "image_carousel",
-                     columns: [{
-                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ isi[i] + '/ANDROID/sticker_animation@2x.png',
-                         action: {
-                             type: "uri",
-                             uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
-                                  ]
-                                }
-            }]).then(function () {
-                window.alert("Message sent");
-            }).catch(function (error) {
-                window.alert("Error sending message: " + error);
-            });
-        });
+        var a = document.createElement("a")
         var x = document.createElement("img");
+        a.setAttribute("href", 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png');
+        a.setAttribute("id", isi[i]);
         x.setAttribute("src", 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png');
         document.body.appendChild(a);
         document.body.appendChild(x);
