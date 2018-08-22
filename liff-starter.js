@@ -25,7 +25,13 @@ function getProfile(){
 function makeList(){
     var stri = getParameterByName('t');
     var isi = stri.split(',');
-    document.getElementById('loop').value = isi;
+    document.getElementById('loop').value = 'hasil  '+isi;
+    var i;
+    for (i = 0; i < isi.length; i++) {
+        var x = document.createElement("IMG");
+        x.setAttribute("src", 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+'/ANDROID/sticker.png');
+        document.body.appendChild(x);
+        };
 }
     
 function initializeApp(data) {
