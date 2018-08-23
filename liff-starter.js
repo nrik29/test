@@ -36,12 +36,12 @@ function makeList(){
     } else {
         ep = "/ANDROID/sticker.png";
     }
-    window.alert(ep)
+    
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
         var a = document.createElement("img");
         a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep;
-        //a.id = isi[i]
+        var idstk = isi[i]
         a.addEventListener('click', function () {
         liff.sendMessages([{
               type: "template",
@@ -49,7 +49,7 @@ function makeList(){
               template: {
                      type: "image_carousel",
                      columns: [{
-                         imageUrl: "https://stickershop.line-scdn.net/stickershop/v1/sticker/"+isi[i]+ep,
+                         imageUrl: "https://stickershop.line-scdn.net/stickershop/v1/sticker/"+idstk+ep,
                          action: {
                              type: "uri",
                              uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
