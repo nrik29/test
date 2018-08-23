@@ -29,13 +29,14 @@ function makeList(){
     var tipe = getParameterByName('type');
     var stri = getParameterByName('stkid');
     var isi = stri.split(',');
+    var ep = '';
     var i;
     if (tipe = 'anim') {
-        var ep = '/ANDROID/sticker_animation@2x.png';
+        ep = '/ANDROID/sticker_animation@2x.png';
     } else {
-        var ep = "/ANDROID/sticker.png";
+        ep = "/ANDROID/sticker.png";
     }
-    window.alert(ep)
+    //window.alert(ep)
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
         var a = document.createElement("img");
