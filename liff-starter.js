@@ -41,9 +41,9 @@ function makeList(){
         //var a = document.createElement('a');
         var a = document.createElement("img");
         a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep;
-        var idstk = isi[i]
         a.addEventListener('click', function () {
-        liff.sendMessages([{
+        var idstk = isi[i]
+            liff.sendMessages([{
               type: "template",
               altText: "Sticker",
               template: {
