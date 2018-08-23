@@ -35,6 +35,7 @@ function makeList(){
     } else {
         var ep = "/ANDROID/sticker.png";
     }
+    window.alert(ep)
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
         var a = document.createElement("img");
