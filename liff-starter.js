@@ -31,7 +31,7 @@ function makeList(){
     var isi = stri.split(',');
     var ep = '';
     var i;
-    if (tipe = 'anim') {
+    if (tipe === 'anim') {
         ep = '/ANDROID/sticker_animation@2x.png';
     } else {
         ep = "/ANDROID/sticker.png";
