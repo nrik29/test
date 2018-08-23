@@ -49,7 +49,7 @@ function makeList(){
               template: {
                      type: "image_carousel",
                      columns: [{
-                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+ isi[i] + ep,
+                         imageUrl: 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep,
                          action: {
                              type: "uri",
                              uri: "line://shop/sticker/detail/"+getParameterByName('pkgid')}}
