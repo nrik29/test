@@ -71,5 +71,5 @@ body {
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         transform: scale(1.1);
-        transition: visibility 3s linear 2s, opacity 2s 0s, transform 2s;        
+        transition: visibility 1s linear 1s, opacity 1s 0s, transform 1s;        
 }
