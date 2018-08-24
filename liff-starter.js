@@ -2,9 +2,9 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
-        modal();
     });
 };
+
 function modal(){
     var modal = document.querySelector(".modal");
     var trigger = document.querySelector(".trigger");
@@ -29,6 +29,7 @@ function getP(){
     var tipe = getParameterByName('type')
     if (!tipe) {
         document.getElementById('home').src = 'bg.jpg';
+        modal();
     } else {
         makeList();
     }
