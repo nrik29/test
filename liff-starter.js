@@ -1,13 +1,29 @@
 window.onload = function (e) {
     liff.init(function () {
+        var modal = document.querySelector(".modal");
+        var trigger = document.querySelector(".trigger");
+        var closeButton = document.querySelector(".close-button");
         getProfile();
         getP();
     });
 };
 
+function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
+
+function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
+        }
+    }
+
 function getP(){
     var tipe = getParameterByName('type')
     if (!tipe) {
+        toggleModal();
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
         document.getElementById('home').src = 'bg.jpg';
     } else {
         makeList();
