@@ -8,7 +8,7 @@ body {
 	padding: 0;
 }
 
-.imag { 
+#imag { 
     max-width: 25%; 
     height: auto; 
 }
