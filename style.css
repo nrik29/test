@@ -20,8 +20,8 @@ body {
 
 .layang {
 	position:fixed;
-	left:5px;
-	top:60px;
+	right:5px;
+	top:10px;
 }
 
 button {
