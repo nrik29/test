@@ -2,34 +2,31 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
+        var modal = document.querySelector(".modal");
+        var trigger = document.querySelector(".trigger");
+        var closeButton = document.querySelector(".close-button");
     });
 };
 
-function modal(){
-    var modal = document.querySelector(".modal");
-    var trigger = document.querySelector(".trigger");
-    var closeButton = document.querySelector(".close-button");
-
-    function toggleModal() {
+    
+function toggleModal() {
     modal.classList.toggle("show-modal");
     }
 
-    function windowOnClick(event) {
+function windowOnClick(event) {
     if (event.target === modal) {
        toggleModal();
       }
     }
-    trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
-}
-
+    
 
 function getP(){
     var tipe = getParameterByName('type')
     if (!tipe) {
         document.getElementById('home').src = 'bg.jpg';
-        modal();
+        trigger.addEventListener("click", toggleModal);
+        closeButton.addEventListener("click", toggleModal);
+        window.addEventListener("click", windowOnClick);
     } else {
         makeList();
     }
