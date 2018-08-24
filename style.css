@@ -61,8 +61,8 @@ body {
         background-color: darkgray;
 }
 .show-modal {
-        opacity: 1;
-	filter: alpha(opacity=20);
+        opacity: 0;
+	filter: alpha(opacity=80);
         visibility: visible;
 	position: fixed;
         left: 0;
