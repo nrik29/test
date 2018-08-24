@@ -8,7 +8,7 @@ window.onload = function (e) {
 function getP(){
     var tipe = getParameterByName('type')
     if (!tipe) {
-        window.alert('type kosong');
+        document.getElementById('home').src = 'bg.jpg';
     } else {
         makeList();
     }
@@ -27,9 +27,6 @@ function getProfile(){
     liff.getProfile().then(function (profile) {
         document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
         document.getElementById('main').src = profile.pictureUrl;        
-        document.getElementById('closewindowbutton').addEventListener('click', function () {
-        liff.closeWindow();
-        });
     });
 }
 
@@ -39,6 +36,10 @@ function makeList(){
     var isi = stri.split(',');
     var ep = '';
     var i;
+    document.getElementById('desk').textContent = 'Klik pada Gambar di Bawah untuk Mengirim Stiker';
+    document.getElementById('close').addEventListener('click', function () {
+        liff.closeWindow();
+        });
     if (tipe === 'anim') {
         ep = '/ANDROID/sticker_animation@2x.png';
     } else {
