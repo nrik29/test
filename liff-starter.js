@@ -1,10 +1,18 @@
 window.onload = function (e) {
     liff.init(function () {
         getProfile();
-        makeList();
+        getP();
     });
 };
 
+function getP(){
+    var tipe = getParameterByName('type')
+    if (!tipe) {
+        window.alert('type kosong');
+    } else {
+        makeList();
+    }
+    }
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, '\\$&');
