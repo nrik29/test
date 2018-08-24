@@ -1,18 +1,19 @@
 window.onload = function (e) {
     liff.init(function () {
-        var modal = document.querySelector(".modal");
-        var trigger = document.querySelector(".trigger");
-        var closeButton = document.querySelector(".close-button");
         getProfile();
         getP();
     });
 };
 
 function toggleModal() {
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector(".close-button");   
         modal.classList.toggle("show-modal");
     }
 
 function windowOnClick(event) {
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector(".close-button");   
         if (event.target === modal) {
             toggleModal();
         }
@@ -21,6 +22,8 @@ function windowOnClick(event) {
 function getP(){
     var tipe = getParameterByName('type')
     if (!tipe) {
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector(".close-button");
         toggleModal();
         closeButton.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
