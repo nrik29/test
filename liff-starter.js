@@ -35,14 +35,13 @@ function makeList(){
         ep = '/ANDROID/sticker_animation@2x.png';
     } else {
         ep = "/ANDROID/sticker.png";
-    }
-    
+    }    
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
         var a = document.createElement("img");
+        const idstk = isi[i]
         a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep;
         a.addEventListener('click', function () {
-        var idstk = isi[i]
             liff.sendMessages([{
               type: "template",
               altText: "Sticker",
