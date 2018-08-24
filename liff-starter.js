@@ -27,6 +27,9 @@ function getProfile(){
     liff.getProfile().then(function (profile) {
         document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
         document.getElementById('main').src = profile.pictureUrl;        
+        document.getElementById('close').addEventListener('click', function () {
+            liff.closeWindow();
+        });
     });
 }
 
@@ -37,9 +40,6 @@ function makeList(){
     var ep = '';
     var i;
     document.getElementById('desk').textContent = 'Klik pada Gambar di Bawah untuk Mengirim Stiker';
-    document.getElementById('close').addEventListener('click', function () {
-        liff.closeWindow();
-        });
     if (tipe === 'anim') {
         ep = '/ANDROID/sticker_animation@2x.png';
     } else {
@@ -49,6 +49,7 @@ function makeList(){
         //var a = document.createElement('a');
         var a = document.createElement("img");
         const idstk = isi[i]
+        a.id = 'imag';
         a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep;
         a.addEventListener('click', function () {
             liff.sendMessages([{
