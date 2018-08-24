@@ -49,7 +49,7 @@ function makeList(){
         //var a = document.createElement('a');
         var a = document.createElement("img");
         const idstk = isi[i]
-        a.id = 'imag';
+        a.class = 'imag';
         a.src = 'https://stickershop.line-scdn.net/stickershop/v1/sticker/'+isi[i]+ep;
         a.addEventListener('click', function () {
             liff.sendMessages([{
