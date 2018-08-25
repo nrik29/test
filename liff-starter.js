@@ -3,7 +3,29 @@ window.onload = function (e) {
         getProfile();
         getP();
     });
+    addsc();
 };
+
+funcrion addsc(){
+    var url = "data.json";
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr.stickers);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += arr[i].id;
+    }
+    document.getElementById("fdata").innerHTML = out;
+}
 
 function windowOnClick(event) {
         var modal = document.querySelector(".modal");
