@@ -5,7 +5,7 @@ window.onload = function (e) {
     });
 };
 
-funcrion addsc(){
+function addsc(){
     var url = "data.json";
     xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
