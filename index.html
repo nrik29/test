@@ -10,15 +10,26 @@
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <label id='userid'></label><hr>
-            <label id='fdata'></label><br>
             </div>
         </div>
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
+<label id='fdata'></label><br>        
         
-        
-        
+    <script>
+var xmlhttp = new XMLHttpRequest();
+var url = "data.json";
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        document.getElementById("fdata").innerHTML = myArr;
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+</script>
+
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
     
