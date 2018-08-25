@@ -5,6 +5,12 @@ window.onload = function (e) {
     });
 };
 
+function toggleModal() {
+        var modal = document.querySelector(".modal");
+        var closeButton = document.querySelector(".close-button");   
+        modal.classList.toggle("show-modal");
+    }
+
 function windowOnClick(event) {
         var modal = document.querySelector(".modal");
         var closeButton = document.querySelector(".close-button");   
