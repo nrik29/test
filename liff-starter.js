@@ -2,30 +2,8 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
-        fetch();
     });
 };
-
-function fetch(){
-    var xmlhttp = new XMLHttpRequest();
-    var url = "data.json";
-
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        document.getElementById("fdata").textContent = myArr;
-    }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-    )
-    
-
-function toggleModal() {
-        var modal = document.querySelector(".modal");
-        var closeButton = document.querySelector(".close-button");   
-        modal.classList.toggle("show-modal");
-    }
 
 function windowOnClick(event) {
         var modal = document.querySelector(".modal");
