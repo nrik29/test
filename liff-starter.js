@@ -7,20 +7,20 @@ window.onload = function (e) {
 };
 
 function fetch(){
-    var request = new XMLHttpRequest();
-    request.open('GET', 'https://nrik29.github.io/test/data.json', true);
-    // this following line is needed to tell the server this is a ajax request
-    request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    request.onload = function () {
-    if (this.status >= 200 && this.status < 400) {
-            var json = JSON.parse(this.response);
-            document.getElementById('fdata').textContent = json;
-            // this is where you can do something with the json response
-        }
-    };
-    request.send();
-    });    
-}
+    var xmlhttp = new XMLHttpRequest();
+    var url = "data.json";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        document.getElementById("fdata").textContent = myArr;
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+    )
+    
+
 function toggleModal() {
         var modal = document.querySelector(".modal");
         var closeButton = document.querySelector(".close-button");   
