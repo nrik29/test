@@ -2,8 +2,8 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
+        addsc();
     });
-    addsc();
 };
 
 funcrion addsc(){
