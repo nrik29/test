@@ -13,16 +13,16 @@ funcrion addsc(){
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr.stickers);
     }
-};
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 }
 
 function myFunction(arr) {
     var out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
-        out += arr[i].id;
+        out += ','+arr[i].id;
     }
     document.getElementById("fdata").innerHTML = out;
 }
