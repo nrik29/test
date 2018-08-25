@@ -2,9 +2,22 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
+        fetch();
     });
 };
 
+function fetch(){
+    // Replace ./data.json with your JSON feed
+    fetch('./data.json').then(response => {
+    return response.json();
+    }).then(data => {
+    // Work with JSON data here
+    document.getElementById('fdata').textContent = data;
+    }).catch(err => {
+  // Do something for an error here
+    document.getElementById('fdata').textContent = err;
+    });
+}
 function toggleModal() {
         var modal = document.querySelector(".modal");
         var closeButton = document.querySelector(".close-button");   
