@@ -7,16 +7,19 @@ window.onload = function (e) {
 };
 
 function fetch(){
-    // Replace ./data.json with your JSON feed
-    fetch('./data.json').then(response => {
-    return response.json();
-    }).then(data => {
-    // Work with JSON data here
-    document.getElementById('fdata').textContent = data;
-    }).catch(err => {
-  // Do something for an error here
-    document.getElementById('fdata').textContent = err;
-    });
+    var request = new XMLHttpRequest();
+    request.open('GET', 'https://nrik29.github.io/test/data.json', true);
+    // this following line is needed to tell the server this is a ajax request
+    request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    request.onload = function () {
+    if (this.status >= 200 && this.status < 400) {
+            var json = JSON.parse(this.response);
+            document.getElementById('fdata').textContent = json;
+            // this is where you can do something with the json response
+        }
+    };
+    request.send();
+    });    
 }
 function toggleModal() {
         var modal = document.querySelector(".modal");
