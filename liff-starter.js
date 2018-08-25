@@ -2,7 +2,6 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
-        addsc();
     });
 };
 
@@ -44,6 +43,7 @@ function getP(){
         closeButton.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
         document.getElementById('home').src = 'bg.jpg';
+        addsc();
     } else {
         makeList();
     }
