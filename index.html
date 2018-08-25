@@ -23,7 +23,7 @@ var url = "data.json";
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
-        document.getElementById("fdata").innerHTML = myArr;
+        document.getElementById("fdata").innerHTML = myArr.stickers;
     }
 };
 xmlhttp.open("GET", url, true);
