@@ -31,7 +31,7 @@
             const idstk = stkr[i].id
             data += ','+idstk 
             }
-        document.getElementById("fdata").innerHTML = data;
+        document.getElementById("fdata").value = data;
         }
     };
     xmlhttp.open("GET", "dl.stickershop.line.naver.jp/products/0/0/1/12140/android/productInfo.meta", true);
