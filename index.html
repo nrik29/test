@@ -18,25 +18,6 @@
         <div class='layang'><center><button id="close">CLOSE</button></center></div>   
  
     
-    <script>
-    //$.get("www.google.com", function(response) { alert(response) });
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myObj = JSON.parse(this.responseText);
-        var data = '';
-        var i;
-        var stkr = myObj.stickers
-        for (i = 0; i < stkr.length; i++) {
-            const idstk = stkr[i].id
-            data += ','+idstk 
-            }
-        document.getElementById("fdata").value = data;
-        }
-    };
-    xmlhttp.open("GET", "http://dl.stickershop.line.naver.jp/products/0/0/1/7396/android/productInfo.meta", true);
-    xmlhttp.send();
-    </script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
 </body>
