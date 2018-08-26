@@ -2,26 +2,9 @@ window.onload = function (e) {
     liff.init(function () {
         getProfile();
         getP();
-        loadJSON(function(response) {
-        // Parse JSON string into object
-        var actual_JSON = JSON.parse(response);
-        document.getElementById('fdata').innerHTML = actual_JSON;
- });
     });
 };
 
-function loadJSON(callback) {
-    var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'http://dl.stickershop.line.naver.jp/products/0/0/1/5/android/productInfo.meta', true); // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-          }
-    };
-    xobj.send(null);  
-}
 
 function toggleModal() {
         var modal = document.querySelector(".modal");
@@ -46,6 +29,7 @@ function getP(){
         closeButton.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
         document.getElementById('home').src = 'bg.jpg';
+        document.getElementById('fdata').textContent = 'Penggunaan:<br>kirim ke chat format link seperti berikut<br>line://app/1601769611-NVKq2lMZ?type=anim&pkgid=1234&stkid=1234,1235,1236<br>Tidak untuk room square<br>Note: <br>type=anim untuk sticker bergerak<br>type=sttic untuk sticker tak bergerak dan popup<br>pkgid=PackageID<br>stkid=StickerID dalam bentuk list separator koma';
     } else {
         makeList();
     }
