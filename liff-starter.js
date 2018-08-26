@@ -29,7 +29,7 @@ function getP(){
         closeButton.addEventListener("click", toggleModal);
         window.addEventListener("click", windowOnClick);
         document.getElementById('home').src = 'bg.jpg';
-        document.getElementById('fdata').textContent = 'Penggunaan:<br>kirim ke chat format link seperti berikut<br>line://app/1601769611-NVKq2lMZ?type=anim&pkgid=1234&stkid=1234,1235,1236<br>Tidak untuk room square<br>Note: <br>type=anim untuk sticker bergerak<br>type=sttic untuk sticker tak bergerak dan popup<br>pkgid=PackageID<br>stkid=StickerID dalam bentuk list separator koma';
+        document.getElementById('fdata').textContent = 'Penggunaan: --> kirim ke chat format link seperti berikut --> line://app/1601769611-NVKq2lMZ?type=anim&pkgid=1234&stkid=1234,1235,1236 --> Note: Tidak untuk room square --> type=anim untuk sticker bergerak --> type=sttic untuk sticker tak bergerak dan popup --> pkgid=PackageID --> stkid=StickerID dalam bentuk list separator koma';
     } else {
         makeList();
     }
