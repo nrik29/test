@@ -15,24 +15,7 @@
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
-        <label id='fdata'></label><br>        
-        
-    <script>
-    <script type="application/javascript">
-    var request = new XMLHttpRequest();
-    request.open('GET', '/data.json', true);
-    // this following line is needed to tell the server this is a ajax request
-    request.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    request.onload = function () {
-    if (this.status >= 200 && this.status < 400) {
-            var json = JSON.parse(this.response);
-            document.getElementById("fdata").innerHTML = json;
-            // this is where you can do something with the json response
-        }
-    };
-    request.send();
-    });
-    </script>
+        <label id='fdata'></label><br>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
 </body>
