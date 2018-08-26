@@ -15,7 +15,20 @@
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
-        <label id='fdata'></label><br>
+    1    
+    <label id='fdata'></label><br>
+    
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("fdata").innerHTML = myObj.stickers[0].id;
+        }
+    };
+    xmlhttp.open("GET", "data.json", true);
+    xmlhttp.send();
+    </script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
 </body>
