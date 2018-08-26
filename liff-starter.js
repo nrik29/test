@@ -63,9 +63,9 @@ function makeList(){
     var i;
     document.getElementById('desk').textContent = 'Klik pada Gambar di Bawah untuk Mengirim Stiker';
     if (tipe === 'anim') {
-        ep = '/ANDROID/sticker_animation@2x.png';
+        ep = '/IOS/sticker_animation@2x.png';
     } else {
-        ep = "/ANDROID/sticker.png";
+        ep = "/IOS/sticker@2x.png";
     }    
     for (i = 0; i < isi.length; i++) {
         //var a = document.createElement('a');
