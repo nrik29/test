@@ -15,7 +15,7 @@
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
-    2    
+    4    
     <label id='fdata'></label><br>
     
     <script>
@@ -26,8 +26,9 @@
         var myObj = JSON.parse(this.responseText);
         var data = '';
         var i;
-        for (i = 0; i < isi.length; i++) {
-            const idstk = myObj.srickers[i].id
+        var stkr = myObj.stickers
+        for (i = 0; i < stkr.length; i++) {
+            const idstk = stkr[i].id
             data += ','+idstk 
             }
         document.getElementById("fdata").innerHTML = data;
