@@ -2,8 +2,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sticker Sender</title>
     <link rel="stylesheet" href="style.css">
-    <script src="http://jqueryjs.googlecode.com/files/jquery-1.3.2.js" ></script>
-</head>
+    </head>
 
 <body>
     <center><hr><img width=80px height=80px id='main'><br><hr>
@@ -16,20 +15,26 @@
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
-    1    
+    2    
     <label id='fdata'></label><br>
     
     <script>
-    $.get("www.google.com", function(response) { alert(response) });
-    //var xmlhttp = new XMLHttpRequest();
-    //xmlhttp.onreadystatechange = function() {
-    //if (this.readyState == 4 && this.status == 200) {
-    //    var myObj = JSON.parse(this.responseText);
-    //    document.getElementById("fdata").innerHTML = myObj.stickers[0].id;
-    //    }
-    //};
-    //xmlhttp.open("GET", "data.meta", true);
-    //xmlhttp.send();
+    //$.get("www.google.com", function(response) { alert(response) });
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        var data = '';
+        var i;
+        for (i = 0; i < isi.length; i++) {
+            const idstk = myObj.srickers[i].id
+            data += ','+idstk 
+            }
+        document.getElementById("fdata").innerHTML = data;
+        }
+    };
+    xmlhttp.open("GET", "data.meta", true);
+    xmlhttp.send();
     </script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
     <script src="liff-starter.js"></script>
