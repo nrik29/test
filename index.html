@@ -15,8 +15,8 @@
         <hr><label id='desk'></label><hr>
         <img class='responsive' id='home'></center>
         <div class='layang'><center><button id="close">CLOSE</button></center></div>
-    4    
-    <label id='fdata'></label><br>
+    5    
+    <input type='text' id='fdata'><br>
     
     <script>
     //$.get("www.google.com", function(response) { alert(response) });
@@ -34,7 +34,7 @@
         document.getElementById("fdata").innerHTML = data;
         }
     };
-    xmlhttp.open("GET", "data.meta", true);
+    xmlhttp.open("GET", "dl.stickershop.line.naver.jp/products/0/0/1/12140/android/productInfo.meta", true);
     xmlhttp.send();
     </script>
     <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
