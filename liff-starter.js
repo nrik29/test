@@ -58,12 +58,17 @@ function getProfile(){
 function makeList(){
     var tipe = getParameterByName('type');
     var stri = getParameterByName('stkid');
+    var pkgi = getParameterByName('pkgid');
     var isi = stri.split(',');
     var ep = '';
     var i;
     document.getElementById('desk').textContent = 'Klik pada Gambar di Bawah untuk Mengirim Stiker';
-    if (tipe === 'anim') {
-        ep = '/IOS/sticker_animation@2x.png';
+    if (tipe !== 'anim' && pkgi!==1 && pkgi!==3 && pkgi!==4 && pkgi!==5) {
+        ep = '/IOS/sticker@2x.png';
+    } else if (tipe !== 'anim' || pkgi===1 || pkgi===3 || pkgi===4 || pkgi===5) {
+        ep = "/IOS/sticker.png";
+    } else if (tipe === 'anim'){
+        ep = "/IOS/sticker_animation@2x.png";
     } else {
         ep = "/IOS/sticker@2x.png";
     }    
