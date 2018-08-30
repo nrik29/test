@@ -55,6 +55,7 @@ function getProfile(){
     });
 }
 
+
 function makeList(){
     var tipe = getParameterByName('type');
     var stri = getParameterByName('stkid');
