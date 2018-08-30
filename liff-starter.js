@@ -66,7 +66,7 @@ function makeList(){
     if (tipe !== 'anim' && pkgi!=='1' && pkgi!=='3' && pkgi!=='4' && pkgi!=='5') {
         ep = '/IOS/sticker@2x.png';
     } else if (tipe !== 'anim' || pkgi==='1' || pkgi==='3' || pkgi==='4' || pkgi==='5') {
-        ep = "/IOS/sticker.png";
+        ep = "/ANDROID/sticker.png";
     } else if (tipe === 'anim'){
         ep = "/IOS/sticker_animation@2x.png";
     } else {
