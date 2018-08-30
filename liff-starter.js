@@ -63,9 +63,9 @@ function makeList(){
     var ep = '';
     var i;
     document.getElementById('desk').textContent = 'Klik pada Gambar di Bawah untuk Mengirim Stiker';
-    if (tipe !== 'anim' && pkgi!==1 && pkgi!==3 && pkgi!==4 && pkgi!==5) {
+    if (tipe !== 'anim' && pkgi!=='1' && pkgi!=='3' && pkgi!=='4' && pkgi!=='5') {
         ep = '/IOS/sticker@2x.png';
-    } else if (tipe !== 'anim' || pkgi===1 || pkgi===3 || pkgi===4 || pkgi===5) {
+    } else if (tipe !== 'anim' || pkgi==='1' || pkgi==='3' || pkgi==='4' || pkgi==='5') {
         ep = "/IOS/sticker.png";
     } else if (tipe === 'anim'){
         ep = "/IOS/sticker_animation@2x.png";
