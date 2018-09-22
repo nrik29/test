@@ -50,7 +50,11 @@ function getProfile(){
         document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
         document.getElementById('main').src = profile.pictureUrl;        
         document.getElementById('close').addEventListener('click', function () {
-            liff.closeWindow();
+            liff.openWindow({
+            url: 'line://app/1570947238-9OaV05mK'
+            external:true
+        });
+            //liff.closeWindow();
         });
     });
 }
