@@ -49,13 +49,12 @@ function getProfile(){
     liff.getProfile().then(function (profile) {
         document.getElementById('userid').textContent = 'Hai  ' + profile.displayName;
         document.getElementById('main').src = profile.pictureUrl;        
-        //document.getElementById('close').addEventListener('click', function () {
-        //    liff.openWindow({
-        //    url: 'line://app/1570947238-9OaV05mK'
-        //    external:true
-        //});
+        document.getElementById('close').addEventListener('click', function () {
+            liff.openWindow({
+            url: 'line://app/1570947238-9OaV05mK'
+        });
             //liff.closeWindow();
-        //});
+        });
     });
 }
 
