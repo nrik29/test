@@ -22,6 +22,32 @@ function windowOnClick(event) {
 
 function getP(){
     var tipe = getParameterByName('type')
+    liff.sendMessages([{
+              type: "text",
+              text: "Quick",
+              quickReply: {
+                 items: [
+                     {
+                     type: "action",
+                     imageUrl:"https://www.example.com/a.png",
+                     action: {
+                           type: "cameraRoll",
+                           label: "Send photo",
+                           text:"send photo"
+                              }
+                              },
+                              {
+                     type: "action",
+                     imageUrl:"https://www.example.com/a.png",
+                     action: {
+                            type: "camera",
+                            label: "Open camera"
+                              }
+                              }
+                     ]
+                  }}]).then(function () {
+            liff.closeWindow();
+        });
     if (!tipe) {
         var modal = document.querySelector(".modal");
         var closeButton = document.querySelector(".close-button");
